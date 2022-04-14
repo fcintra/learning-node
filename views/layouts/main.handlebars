@@ -21,8 +21,15 @@
             <li><a href="/">Pensamentos</a></li>
 
             <!-- URL POS atenticação -->
+            {{#if session.userid}}
+            <li><a href="/toughts/dashboard">Dashboard</a></li>
+                <li><a href="/logout">Sair</a></li>
+            {{else}}
             <li><a href="/login">Entrar</a></li>
             <li><a href="/register">Registrar</a></li>
+
+            {{/if}}
+            
 
         </ul>
     </nav>
@@ -36,7 +43,7 @@
     </div>
 
     <footer>
-        <p><span>Toughts</span> &copy; 2021</p>
+        <p><span>Toughts</span> &copy; 2022</p>
     </footer>
 </body>
 <html>
